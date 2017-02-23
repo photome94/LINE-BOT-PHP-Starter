@@ -15,11 +15,8 @@ if (!is_null($events['events'])) {
 			$input = $event['message']['text'];
 			$text = "";
 
-			$arraySearchword = array("หา","อยากรู้","เพลง","song","search");
-			$text_ex = explode(':', $input);
-
-			if(in_array($arraySearchword, strtolower($text_ex[0])){
-				$text = 'https://www.youtube.com/results?search_query='.$text_ex[1];
+			if($input == 'song'){
+				$text = 'https://www.youtube.com/watch?v=nCIKrfw0ztI&list=LLYajoACGS4C-7zC4wKaqw8g&index=2';
 			}else{
 				$text = $input;
 			}
