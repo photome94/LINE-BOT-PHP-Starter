@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			$text = "";
 
 			if($input == 'song'){
-				$text = 'http://listen.becteroradio.com/eazy-128.html';
+				$text = 'https://www.youtube.com/watch?v=nCIKrfw0ztI&list=LLYajoACGS4C-7zC4wKaqw8g&index=2';
 			}else{
 				$text = $input;
 			}
