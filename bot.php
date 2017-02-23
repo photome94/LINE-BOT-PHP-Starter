@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			$arraySearchword = array("หา","อยากรู้","เพลง","song","search");
 			$text_ex = explode(':', $input);
 
-			if(in_array($arraySearchword, strtolower($text_ex[0])){
+			if(in_array($arraySearchword, strtolower($text_ex[0]))){
 				$text = 'https://www.youtube.com/results?search_query='.$text_ex[1];
 			}else{
 				$text = $input;
