@@ -12,14 +12,22 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$input = $event['message']['text'];
+			$text = "";
+
+			if($input == 'song'){
+				$text = 'http://listen.becteroradio.com/eazy-128.html';
+			}else{
+				$text = $input;
+			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'อัลไลลลลล'
+				// 'text' => $text
+				'text' => $text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
